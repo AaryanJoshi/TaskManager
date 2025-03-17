@@ -15,7 +15,7 @@ const TaskList = () => {
   // Update task
   const updateTask = async (updatedTask) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/tasks/${updatedTask.id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/tasks/${updatedTask.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const TaskList = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/tasks'); // Adjust URL as per your FastAPI endpoint
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/tasks`); // Adjust URL as per your FastAPI endpoint
       const data = await response.json();
 
       // Get today's date in the format YYYY-MM-DD
@@ -57,7 +57,7 @@ const TaskList = () => {
       const taskToUpdate = tasks.find(task => task.id === taskId);
       taskToUpdate.completed = !taskToUpdate.completed; // Toggle completed status
 
-      const response = await fetch(`http://127.0.0.1:8000/tasks/${taskId}/complete`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/tasks/${taskId}/complete`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const TaskList = () => {
 
   const deleteTask = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/tasks/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/tasks/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {

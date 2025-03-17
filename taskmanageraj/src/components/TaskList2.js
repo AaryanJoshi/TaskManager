@@ -232,7 +232,7 @@ const TaskList2 = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [taskToEdit, setTaskToEdit] = useState();
 
-  const apiBaseUrl = "http://127.0.0.1:8000"; 
+  const apiBaseUrl = "${process.env.REACT_APP_API_URL}"; 
 
   // Fetch tasks when the component is mounted
   useEffect(() => {
