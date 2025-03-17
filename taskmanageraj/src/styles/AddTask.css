@@ -1,0 +1,101 @@
+/* AddTask.css */
+
+/* General container styles */
+.add-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align the form to the top */
+    min-height: 80vh; /* Reduced min-height to bring the form higher */
+    background-color: #f4f7fc;
+    padding: 10px 20px 20px; /* Reduced top padding */
+  }
+  
+  /* Heading styles */
+  .add-task h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Form container styling */
+  .task-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form element styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #4a90e2;
+  }
+  
+  /* Textarea specific styling */
+  .form-group textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 18px;
+    font-size: 1rem;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #357ab7;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .task-form {
+      width: 100%;
+    }
+  }
+  

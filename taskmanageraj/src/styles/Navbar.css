@@ -1,0 +1,92 @@
+/* Basic reset for list and container */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 93px;
+    left: 0;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Smooth transition for width change */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
+  }
+  
+  /* When the menu is open */
+  .menu-open {
+    width: 165px; /* Expanded width */
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+  
+  .menu-closed {
+    width: 70px; /* Collapsed width */
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Adds space between each list item */
+  }
+  
+  /* Add gap between Menu and Task List */
+  .firstmenu{
+    margin-bottom: 50px; /* Larger gap after Menu */
+  }
+  
+  /* Change background color on hover */
+  li:hover {
+    background-color: #444;
+  }
+  
+  /* Styling for the icons */
+  .menuicon, .sort {
+    color: #fff;
+    font-size: 24px; /* Adjust icon size */
+    transition: font-size 0.3s ease;
+  }
+  .tasklist, .search{
+    color: #fff;
+    font-size: 20px; /* Adjust icon size */
+    transition: font-size 0.3s ease;
+  }
+  .homeicon{
+    color: #fff;
+    font-size: 24px; /* Adjust icon size */
+    transition: font-size 0.3s ease;
+  }
+
+  .Add-task{
+    color: #fff;
+    font-size: 24px; /* Adjust icon size */
+    transition: font-size 0.3s ease;
+  }
+  
+  /* Hide the text when the menu is collapsed */
+  .hide-text {
+    display: none;
+  }
+  
+  .show-text {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Text changes color when hovering */
+  li:hover .show-text {
+    color: #ffd700; /* Change text color on hover */
+  }
+  
+  /* Icon-only container styling for collapsed menu */
+  .menu-closed li {
+    justify-content: center; /* Center icons when collapsed */
+  }
+  

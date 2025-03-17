@@ -1,0 +1,294 @@
+/* Adding more style for the Task List */
+.task-list {
+    font-family: 'Arial', sans-serif; /* Adding a smooth font for better readability */
+    width: 70%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the Task List horizontally and add margin from top */
+    padding: 20px;
+    background-color: #d9d8f9;
+    border-radius: 8px;
+    overflow: hidden; /* Hide anything going outside the div */
+}
+
+/* Improve the task list appearance */
+.task-item {
+    padding: 12px; /* Adjust padding for better spacing */
+    width: 80%;
+    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Lighter background for better contrast */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for elegance */
+    transition: transform 0.3s ease-in-out; /* Add smooth animation for hovering */
+}
+
+.task-item:hover {
+    background-color: #e0e0e0; /* Light gray on hover for better interaction */
+    transform: scale(1.03); /* Slight zoom effect when hovered */
+}
+
+/* Improved button styles for Edit and Delete buttons */
+.delete-btn,
+.edit-btn{
+    padding: 6px 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Task info inside modal */
+.modal-content h3 {
+    color: #333; /* Dark text for better readability */
+    font-size: 1.8rem; /* Slightly larger font for the title */
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 1.1rem; /* Increase font size for better clarity */
+    margin-bottom: 10px;
+}
+
+.modal-content .close-btn {
+    background-color: #ddd; /* Subtle color for close button */
+    border-radius: 50%;
+    font-size: 18px;
+    color: #333;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .close-btn:hover {
+    background-color: #999; /* Darker on hover for better interaction */
+}
+
+/* Edit task form styling */
+.edit-task-form input,
+.edit-task-form select,
+.edit-task-form textarea {
+    width: 100%; /* Ensure inputs take up full width */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.edit-task-form button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-task-form button:first-child {
+    background-color: #27ae60; /* Green for Save */
+    color: white;
+}
+
+.edit-task-form button:first-child:hover {
+    background-color: #2ecc71;
+}
+
+.edit-task-form button:last-child {
+    background-color: #e74c3c; /* Red for Cancel */
+    color: white;
+}
+
+.edit-task-form button:last-child:hover {
+    background-color: #c0392b;
+}
+
+/* Additional styling for filter input and select */
+.filters input,
+.filters select {
+    border-radius: 5px; /* Smooth the corners of input and select */
+    border: 1px solid #ccc;
+    width:350 px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+.filters input{
+    margin-left:5px
+}
+.filters select{
+    margin-left:300px;
+    margin-right:5px
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: #3498db; /* Highlight border on focus */
+    outline: none;
+}
+
+/* Flexbox improvements for task items */
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.task-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333; /* Dark color for better contrast */
+}
+
+.task-priority {
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+    width:7%;
+    text-align: center;
+}
+
+/* Additional styling for task priority badges */
+.high-priority {
+    background-color: #e74c3c;
+}
+
+.medium-priority {
+    background-color: #f39c12;
+
+}
+
+.low-priority {
+    background-color: #2ecc71;
+
+}
+
+/* Modal background styling */
+.task-modal {
+    z-index: 9999; /* Ensure modal stays on top */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker backdrop for better focus */
+}
+
+/* Ensuring task list scroll works smoothly */
+.ul-tasks {
+    overflow-y: auto;
+    max-height: 400px;
+    padding-right: 15px; /* Add some space for the scrollbar */
+    list-style-type: none;
+    padding: 0;
+    margin-top: 200px; /* Adjusted the margin for proper spacing */
+    margin-left:200px;
+    width: 67%; /* Ensure the ul is taking full width */
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Center items horizontally */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 350px; /* Set a maximum height to enable scrolling */
+}
+
+/* More user-friendly task modal */
+.task-modal .modal-content {
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+}
+
+/* Task Modal styling */
+.task-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is on top of other content */
+}
+  
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+  
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right:10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.delete-btn,
+.edit-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+/* Add space between Edit and Delete buttons */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    margin-left: 10px; /* Add margin to create space between Edit and Delete buttons */
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Hover effects */
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Complete icon for completed tasks */
+.complete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width:0px;
+}
+
+.complete-btn svg {
+    font-size: 1.2rem;
+    color: #050115; /* Green for completed task check */
+}
+
+.task-title{
+    width: 50%;
+}

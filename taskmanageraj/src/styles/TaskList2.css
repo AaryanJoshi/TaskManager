@@ -1,0 +1,218 @@
+
+.task-list-all {
+    width: 70%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the Task List horizontally and add margin from top */
+    padding: 20px;
+    background-color: #d9d8f9;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure content takes full viewport height */
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Limit the width */
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 350px; /* Adjust width for input and select fields */
+  }
+  .filters select{
+    position: fixed;
+    right:190px;
+  }
+  .task-items-ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 200px; /* Adjusted the margin for proper spacing */
+    margin-left:200px;
+    width: 67%; /* Ensure the ul is taking full width */
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Center items horizontally */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 350px;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+    margin: 10px 0; /* Ensure the gap between tasks is equal */
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 90%; /* Control the width of each task item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for better aesthetics */
+    transition: all 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .task-details {
+    width: 80%;
+  }
+  
+  .task-details h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 10px 0;
+  }
+  
+  .task-details p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  .task-priority {
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+  
+  .task-priority.high {
+    background-color: #e74c3c;
+  }
+  
+  .task-priority.medium {
+    background-color: #f39c12;
+  }
+  
+  .task-priority.low {
+    background-color: #2ecc71;
+  }
+  
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .filters input,
+    .filters select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .task-item {
+      flex-direction: column;
+    }
+  
+    .task-details {
+      width: 100%;
+    }
+  } 
+
+  /* Main container for the task list */
+.task-list-all {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #d9d8f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Task Item Styles */
+.task-items-ul {
+
+  list-style-type: none;
+  padding: 0;
+  margin-top: 200px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-details {
+  width: 80%;
+}
+
+.task-actions button {
+  margin-left: 10px;
+}
+
+/* Modal Styles for Edit Form */
+.edit-task-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Darkened background */
+  z-index: 9998;
+}
+
+.edit-task-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  width: 80%;
+  max-width: 600px;
+}
+
+.edit-task-form input,
+.edit-task-form textarea,
+.edit-task-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width:95%
+}
+
+.edit-task-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-task-form button[type="button"] {
+  background-color: #f44336;
+}
+
+.edit-task-form button:hover {
+  opacity: 0.8;
+}
